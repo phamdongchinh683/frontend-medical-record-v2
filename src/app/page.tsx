@@ -1,7 +1,20 @@
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+
 export default function Home() {
   return (
-    <>
-      <h1>Hello world</h1>
-    </>
+    <main style={{ padding: "2rem" }}>
+      {" "}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          marginBottom: "1rem",
+        }}
+      >
+        <ConnectButton /> {/* Add the button here */}
+      </div>
+      <h1>Hi</h1>
+      {/* Rest of your page content */}
+    </main>
   );
 }
