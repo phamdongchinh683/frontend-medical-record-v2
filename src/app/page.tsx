@@ -11,10 +11,8 @@ export default function Home() {
           marginBottom: "1rem",
         }}
       >
-        <ConnectButton /> {/* Add the button here */}
+        <ConnectButton />
       </div>
-      <h1>Hi</h1>
-      {/* Rest of your page content */}
     </main>
   );
 }
