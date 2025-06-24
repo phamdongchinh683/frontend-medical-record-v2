@@ -1,0 +1,32 @@
+[
+ {
+  "icon": "Users",
+  "title": "Patient Management",
+  "description": "Complete patient profiles with medical history, appointments, and treatment plans all in one place."
+ },
+ {
+  "icon": "Clock",
+  "title": "24/7 Access",
+  "description": "Access your complete medical history anytime, anywhere. Perfect for emergencies, travel, or routine healthcare visits."
+ },
+ {
+  "icon": "Shield",
+  "title": "Doctor Access Control",
+  "description": "Role-based permissions ensure only authorized healthcare professionals can access sensitive patient data."
+ },
+ {
+  "icon": "Smartphone",
+  "title": "Mobile Ready",
+  "description": "Full functionality on any device. View test results"
+ },
+ {
+  "icon": "FileText",
+  "title": "Complete Medical History",
+  "description": "Comprehensive record keeping including medications, allergies, procedures, and test results in one secure location."
+ },
+ {
+  "icon": "Database",
+  "title": "Smart Organization",
+  "description": "AI-powered categorization and search makes finding specific medical information quick and intuitive."
+ }
+]

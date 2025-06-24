@@ -1,9 +1,9 @@
 "use client";
-import useRecords from "@/hooks/useRecords";
+import { usePatientMedicalRecords } from "@/hooks/useMedicalRecords";
 import Link from "next/link";
 
-export default function RecordListPage() {
-  const { tokenIds, isLoading, error } = useRecords();
+export default function PatientRecordListPage() {
+  const { data: tokenIds, isLoading, error } = usePatientMedicalRecords();
 
   return (
     <div className="p-4">

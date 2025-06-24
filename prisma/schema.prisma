@@ -1,0 +1,165 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Gender {
+  male
+  female
+}
+
+enum VisitType {
+  outpatient
+  inpatient
+  emergency
+}
+
+enum Role {
+  doctor
+  patient
+}
+
+enum TestType {
+  urine_analysis
+  stool_test
+  body_fluid_analysis
+  cytology
+  immunology
+  microbiology
+  genetic_testing
+  imaging
+  qualitative_test
+  quantitative_test
+  molecular_biology
+  immunofluorescence
+  culture
+}
+
+enum ImageType {
+  X_quang
+  CT
+  MRI
+  PET
+}
+
+enum DiagnosisType {
+  primary
+  secondary
+  differential
+  provisional
+}
+
+model User {
+  id                    String   @id @default(uuid())
+  wallet_user           String   @unique @db.VarChar(43)
+  full_name             String   @db.VarChar(50)
+  age                   Int
+  gender                Gender
+  citizen_identification String   @db.VarChar(13)
+  phone_number          String   @db.VarChar(12)
+  type                  Role
+  create_at             DateTime @default(now())
+  update_at             DateTime @updatedAt
+  visits_patient        Visit[]  @relation("PatientVisits")
+  visits_doctor         Visit[]  @relation("DoctorVisits")
+  access_logs           AccessLog[]
+}
+
+model Visit {
+  id                 String   @id @default(uuid())
+  patient_id         String
+  doctor_id          String
+  visit_type         VisitType
+  nft_token          Int      @unique
+  department         String   @db.VarChar(60)
+  reason_for_visit   String
+  initial_diagnosis  String
+  create_at          DateTime @default(now())
+  update_at          DateTime @updatedAt
+  patient            User     @relation("PatientVisits", fields: [patient_id], references: [id])
+  doctor             User     @relation("DoctorVisits", fields: [doctor_id], references: [id])
+  access_logs        AccessLog[]
+  vital_signs        VitalSign[]
+  lab_results        LabResult[]
+  diagnoses          Diagnosis[]
+  prescriptions      Prescription[]
+  record_images      RecordImage[]
+}
+
+model AccessLog {
+  id         String   @id @default(uuid())
+  user_id    String
+  nft_token  Int
+  create_at  DateTime @default(now())
+  update_at  DateTime @updatedAt
+  user       User     @relation(fields: [user_id], references: [id])
+  visit      Visit    @relation(fields: [nft_token], references: [nft_token])
+}
+
+model VitalSign {
+  id               String   @id @default(uuid())
+  nft_token        Int
+  temperature      Decimal  @db.Decimal(4, 1)
+  heart_rate       Int
+  respiratory_rate Int
+  weight           Decimal  @db.Decimal(5, 2)
+  height           Decimal  @db.Decimal(5, 2)
+  create_at        DateTime @default(now())
+  update_at        DateTime @updatedAt
+  visit            Visit    @relation(fields: [nft_token], references: [nft_token])
+}
+
+model LabResult {
+  id         String   @id @default(uuid())
+  nft_token  Int
+  test_type  TestType
+  result     String
+  test_date  DateTime
+  create_at  DateTime @default(now())
+  update_at  DateTime @updatedAt
+  visit      Visit    @relation(fields: [nft_token], references: [nft_token])
+}
+
+model Diagnosis {
+  id              String        @id @default(uuid())
+  nft_token       Int
+  diagnosis_name  String   @db.VarChar(100)
+  type            DiagnosisType
+  create_at       DateTime @default(now())
+  update_at       DateTime @updatedAt
+  visit           Visit    @relation(fields: [nft_token], references: [nft_token])
+}
+
+model Prescription {
+  id            String   @id @default(uuid())
+  nft_token     Int
+  drug_name     String   @db.VarChar(30)
+  dosage        String   @db.VarChar(20)
+  frequency     String   @db.VarChar(20)
+  duration_days String   @db.VarChar(20)
+  note          String
+  create_at     DateTime @default(now())
+  update_at     DateTime @updatedAt
+  visit         Visit    @relation(fields: [nft_token], references: [nft_token])
+}
+
+model RecordImage {
+  id         String   @id @default(uuid())
+  nft_token  Int
+  image      String
+  type       ImageType
+  create_at  DateTime @default(now())
+  update_at  DateTime @updatedAt
+  visit      Visit    @relation(fields: [nft_token], references: [nft_token])
+}

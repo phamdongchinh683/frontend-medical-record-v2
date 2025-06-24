@@ -1,26 +1,38 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: black;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+[data-rk] {
+  --rk-connect-button-background: #ec4899 !important;
+  --rk-connect-button-background-error: #ef4444 !important;
+  --rk-connect-button-inner-background: #ec4899 !important;
+  --rk-connect-button-text: white !important;
+  --rk-connect-button-text-error: white !important;
+  --rk-connect-button-border-radius: 8px !important;
+  --rk-connect-button-font-size: 14px !important;
+  --rk-connect-button-font-weight: 500 !important;
+  --rk-connect-button-padding: 12px 20px !important;
+  --rk-connect-button-transition: all 0.2s ease-in-out !important;
+}
+
+
+[data-rk] [role="dialog"] {
+  --rk-modal-background: white !important;
+  --rk-modal-border: #e5e7eb !important;
+  --rk-modal-border-radius: 12px !important;
+  --rk-modal-backdrop: rgba(0, 0, 0, 0.5) !important;
+}
+
+.connect-button-wrapper {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
 }

@@ -1,7 +1,7 @@
 "use client";
 
-import config from "@/rainbowKitConfig"; // Import the configuration we created
-import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import config from "@/rainbowKitConfig";
+import { RainbowKitProvider, lightTheme } from "@rainbow-me/rainbowkit";
 import "@rainbow-me/rainbowkit/styles.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import * as React from "react";
@@ -15,10 +15,20 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
   useEffect(() => setMounted(true), []);
 
+  const customTheme = lightTheme({
+    accentColor: "#3b82f6",
+    accentColorForeground: "white",
+    borderRadius: "medium",
+    fontStack: "system",
+    overlayBlur: "small",
+  });
+
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider>{mounted ? children : null}</RainbowKitProvider>
+        <RainbowKitProvider theme={customTheme}>
+          {mounted ? children : null}
+        </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
   );

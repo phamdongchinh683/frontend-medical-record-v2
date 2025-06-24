@@ -1,0 +1,17 @@
+[
+ {
+  "number": "01",
+  "title": "Secure Registration",
+  "description": "Register quickly and securely using your MetaMask wallet as a patient or doctor."
+ },
+ {
+  "number": "02",
+  "title": "Login & Complete Profile",
+  "description": "Log in with MetaMask and provide your essential personal and medical information."
+ },
+ {
+  "number": "03",
+  "title": "Manage & Share",
+  "description": "Organize your health data and securely share records with your healthcare providers."
+ }
+]
