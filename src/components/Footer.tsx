@@ -1,5 +1,5 @@
 import { Heart, Lock, Shield } from "lucide-react";
-
+import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-16">
@@ -21,14 +21,14 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Product</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#" className="hover:text-pink-400 transition-colors">
+                <a href="/features" className="hover:text-pink-400 transition-colors">
                   Features
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-pink-400 transition-colors">
+                <Link href="#" className="hover:text-pink-400 transition-colors">
                   Security
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="hover:text-pink-400 transition-colors">

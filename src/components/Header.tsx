@@ -2,7 +2,7 @@
 
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { Heart } from "lucide-react";
-
+import Nav from "./Nav";
 export default function Header() {
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
@@ -16,11 +16,10 @@ export default function Header() {
               <h1 className="text-xl font-bold text-gray-900">MediCore EMR</h1>
             </div>
           </div>
-          <div className="flex items-center space-x-4">
-            <div className="connect-button-wrapper">
-              <ConnectButton />
-            </div>
+          <div className="hidden md:flex items-center space-x-8">
+            <Nav />
           </div>
+          <ConnectButton />
         </div>
       </div>
     </header>

@@ -15,18 +15,17 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
   useEffect(() => setMounted(true), []);
 
-  const customTheme = lightTheme({
-    accentColor: "#3b82f6",
+  const theme = lightTheme({
+    accentColor: "#ec4899",
     accentColorForeground: "white",
     borderRadius: "medium",
     fontStack: "system",
-    overlayBlur: "small",
   });
 
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider theme={customTheme}>
+        <RainbowKitProvider theme={theme}>
           {mounted ? children : null}
         </RainbowKitProvider>
       </QueryClientProvider>
