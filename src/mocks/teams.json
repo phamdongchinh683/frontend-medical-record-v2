@@ -1,0 +1,48 @@
+{
+ "teams": [
+  {
+   "name": "Dr. Sarah Mitchell",
+   "role": "Chief Executive Officer",
+   "image": "https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=400",
+   "bio": "Former Chief Medical Officer with 15+ years in healthcare technology and digital transformation.",
+   "social": {
+    "linkedin": "#",
+    "twitter": "#",
+    "email": "sarah@medrecords.com"
+   }
+  },
+  {
+   "name": "Michael Chen",
+   "role": "Chief Technology Officer",
+   "image": "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400",
+   "bio": "Tech veteran with expertise in healthcare systems, AI, and secure data infrastructure.",
+   "social": {
+    "linkedin": "#",
+    "twitter": "#",
+    "email": "michael@medrecords.com"
+   }
+  },
+  {
+   "name": "Dr. Emily Rodriguez",
+   "role": "Chief Medical Officer",
+   "image": "https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=400",
+   "bio": "Board-certified physician specializing in digital health and patient care optimization.",
+   "social": {
+    "linkedin": "#",
+    "twitter": "#",
+    "email": "emily@medrecords.com"
+   }
+  },
+  {
+   "name": "David Park",
+   "role": "Head of Security",
+   "image": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400",
+   "bio": "Cybersecurity expert with deep experience in healthcare compliance and data protection.",
+   "social": {
+    "linkedin": "#",
+    "twitter": "#",
+    "email": "david@medrecords.com"
+   }
+  }
+ ]
+}

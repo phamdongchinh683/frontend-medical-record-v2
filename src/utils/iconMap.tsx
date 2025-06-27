@@ -17,7 +17,6 @@ import {
   X,
 } from "lucide-react";
 
-// Centralized icon mapping for the entire application
 export const iconMap = {
   Shield,
   Clock,
@@ -37,15 +36,12 @@ export const iconMap = {
   Database,
 };
 
-// Type for icon names
 export type IconName = keyof typeof iconMap;
 
-// Utility function to get icon component
 export const getIcon = (iconName: string) => {
   return iconMap[iconName as IconName];
 };
 
-// Utility function to render icon with props
 export const renderIcon = (
   iconName: string,
   props?: React.ComponentProps<"svg">

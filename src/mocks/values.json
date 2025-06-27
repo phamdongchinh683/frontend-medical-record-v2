@@ -1,0 +1,24 @@
+{
+ "values": [
+  {
+   "icon": "Shield",
+   "title": "Security First",
+   "description": "We prioritize the highest levels of data security and privacy protection, ensuring your medical information is always safe and compliant with global healthcare standards."
+  },
+  {
+   "icon": "Heart",
+   "title": "Patient-Centered Care",
+   "description": "Every feature we build is designed with patients in mind, empowering individuals to take control of their health journey and improve healthcare outcomes."
+  },
+  {
+   "icon": "Users",
+   "title": "Collaborative Healthcare",
+   "description": "We believe in connecting patients, doctors, and healthcare systems to create a seamless, collaborative environment for better health management."
+  },
+  {
+   "icon": "Star",
+   "title": "Innovation & Excellence",
+   "description": "We continuously innovate to provide cutting-edge solutions that transform how medical records are managed and accessed globally."
+  }
+ ]
+}

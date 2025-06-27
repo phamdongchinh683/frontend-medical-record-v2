@@ -1,3 +1,4 @@
+import { IFeature } from "@/interfaces/IFeature";
 import { renderIcon } from "@/utils/iconMap";
 
 export default function Feature({
@@ -5,11 +6,7 @@ export default function Feature({
   feature,
 }: {
   index: number;
-  feature: {
-    icon: string;
-    title: string;
-    description: string;
-  };
+  feature: IFeature;
 }) {
   return (
     <div

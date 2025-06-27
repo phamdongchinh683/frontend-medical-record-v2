@@ -1,0 +1,24 @@
+{
+ "stats": [
+  {
+   "number": "2M+",
+   "label": "Patients Served",
+   "icon": "Users"
+  },
+  {
+   "number": "50K+",
+   "label": "Healthcare Providers",
+   "icon": "Shield"
+  },
+  {
+   "number": "99.9%",
+   "label": "Uptime Reliability",
+   "icon": "CheckCircle"
+  },
+  {
+   "number": "150+",
+   "label": "Countries Worldwide",
+   "icon": "Star"
+  }
+ ]
+}

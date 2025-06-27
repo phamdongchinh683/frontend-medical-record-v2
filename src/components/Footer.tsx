@@ -1,5 +1,7 @@
 import { Heart, Lock, Shield } from "lucide-react";
 import Link from "next/link";
+import navigation from "@/mocks/navigation.json";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-16">
@@ -20,50 +22,52 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Product</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>
-                <a href="/features" className="hover:text-pink-400 transition-colors">
-                  Features
-                </a>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-pink-400 transition-colors">
-                  Security
-                </Link>
-              </li>
-              <li>
-                <a href="#" className="hover:text-pink-400 transition-colors">
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-pink-400 transition-colors">
-                  API
-                </a>
-              </li>
+              {navigation.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="hover:text-pink-400 transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
             <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#" className="hover:text-pink-400 transition-colors">
+                <Link
+                  href="#"
+                  className="hover:text-pink-400 transition-colors"
+                >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-pink-400 transition-colors">
+                <Link
+                  href="#"
+                  className="hover:text-pink-400 transition-colors"
+                >
                   Careers
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-pink-400 transition-colors">
+                <Link
+                  href="#"
+                  className="hover:text-pink-400 transition-colors"
+                >
                   Press
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-pink-400 transition-colors">
+                <Link
+                  href="#"
+                  className="hover:text-pink-400 transition-colors"
+                >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

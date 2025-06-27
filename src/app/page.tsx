@@ -1,5 +1,17 @@
-import Section from "@/components/Section";
+import {
+  CtaSection,
+  FeatureList,
+  HeroSection,
+  StepList,
+} from "@/components/home";
 
 export default function Home() {
-  return <Section />;
+  return (
+    <>
+      <HeroSection />
+      <FeatureList />
+      <StepList />
+      <CtaSection />
+    </>
+  );
 }
