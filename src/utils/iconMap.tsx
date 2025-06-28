@@ -1,6 +1,7 @@
 import {
   Activity,
   ArrowRight,
+  BookOpen,
   Calendar,
   CheckCircle,
   ChevronRight,
@@ -8,8 +9,12 @@ import {
   Database,
   FileText,
   Heart,
+  HelpCircle,
   Lock,
+  Mail,
   Menu,
+  MessageCircle,
+  Phone,
   Shield,
   Smartphone,
   Star,
@@ -34,6 +39,11 @@ export const iconMap = {
   Heart,
   Calendar,
   Database,
+  Mail,
+  Phone,
+  MessageCircle,
+  BookOpen,
+  HelpCircle,
 };
 
 export type IconName = keyof typeof iconMap;

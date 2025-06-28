@@ -1,5 +1,22 @@
 "use client";
+import type { Metadata } from "next";
 import { useEffect, useState } from "react";
+
+// This would be a server component function, but since this is a client component,
+// we'll show the pattern for dynamic metadata
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const { slug } = params;
+
+  return {
+    title: `Medical Record #${slug} - Medical Records DApp`,
+    description: `View and manage medical record #${slug}. Secure access to your healthcare information.`,
+    keywords: `medical record, ${slug}, healthcare, patient data`,
+  };
+}
 
 export default function DetailRecordPage({
   params,

@@ -1,0 +1,121 @@
+{
+ "contactMethods": [
+  {
+   "icon": "Mail",
+   "title": "Email Support",
+   "description": "Reach out to us via email and we will respond within 24 hours.",
+   "details": [
+    {
+     "label": "General Inquiries",
+     "value": "support@medrecords.com",
+     "available": "24/7"
+    },
+    {
+     "label": "Sales",
+     "value": "sales@medrecords.com",
+     "available": "Mon-Fri"
+    }
+   ],
+   "color": "pink"
+  },
+  {
+   "icon": "Phone",
+   "title": "Phone Support",
+   "description": "Call us for immediate assistance during business hours.",
+   "details": [
+    {
+     "label": "Toll-Free",
+     "value": "+1 800 123 4567",
+     "available": "Mon-Fri 9am-6pm"
+    },
+    {
+     "label": "International",
+     "value": "+1 415 555 1234",
+     "available": "Mon-Fri 9am-6pm"
+    }
+   ],
+   "color": "rose"
+  },
+  {
+   "icon": "MessageCircle",
+   "title": "Chat Box",
+   "description": "Chat with our support team for quick answers.",
+   "details": [
+    {
+     "label": "Chat Support",
+     "value": "Available on website",
+     "available": "24/7"
+    }
+   ],
+   "color": "fuchsia"
+  }
+ ],
+ "offices": [
+  {
+   "city": "San Francisco",
+   "address": "123 Market St, Suite 400",
+   "zipCode": "CA 94103",
+   "phone": "+1 415 555 1234",
+   "email": "sf@medrecords.com",
+   "hours": "Mon-Fri 9am-6pm",
+   "isHeadquarters": true
+  },
+  {
+   "city": "New York",
+   "address": "456 Madison Ave, 10th Floor",
+   "zipCode": "NY 10022",
+   "phone": "+1 212 555 5678",
+   "email": "ny@medrecords.com",
+   "hours": "Mon-Fri 9am-6pm",
+   "isHeadquarters": false
+  },
+  {
+   "city": "London",
+   "address": "789 Oxford St, 2nd Floor",
+   "zipCode": "W1D 2ES",
+   "phone": "+44 20 7946 0998",
+   "email": "london@medrecords.com",
+   "hours": "Mon-Fri 9am-6pm",
+   "isHeadquarters": false
+  },
+  {
+   "city": "Sydney",
+   "address": "101 George St, Level 5",
+   "zipCode": "NSW 2000",
+   "phone": "+61 2 5550 1234",
+   "email": "sydney@medrecords.com",
+   "hours": "Mon-Fri 9am-6pm",
+   "isHeadquarters": false
+  }
+ ],
+ "supportResources": [
+  {
+   "icon": "BookOpen",
+   "title": "Knowledge Base",
+   "description": "Browse articles and guides for common questions.",
+   "link": "#",
+   "color": "pink"
+  },
+  {
+   "icon": "HelpCircle",
+   "title": "FAQs",
+   "description": "Find quick answers to frequently asked questions.",
+   "link": "#",
+   "color": "rose"
+  },
+  {
+   "icon": "FileText",
+   "title": "Documentation",
+   "description": "Read detailed documentation for all features.",
+   "link": "#",
+   "color": "fuchsia"
+  },
+  {
+   "icon": "Users",
+   "title": "Community Forum",
+   "description": "Connect with other users and share experiences.",
+   "link": "#",
+   "color": "violet"
+  }
+ ]
+}

@@ -1,8 +1,9 @@
 import navigation from "@/mocks/navigation.json";
 import Link from "next/link";
-export default function Nav() {
+
+export default function NavigationSection() {
   return (
-    <nav className="hidden md:flex items-center space-x-2">
+    <div className="hidden md:flex items-center space-x-8">
       {navigation.map((item) => (
         <Link
           key={item.name}
@@ -12,6 +13,6 @@ export default function Nav() {
           {item.name}
         </Link>
       ))}
-    </nav>
+    </div>
   );
 }
