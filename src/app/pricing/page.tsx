@@ -5,6 +5,14 @@ import {
   PricingHero,
 } from "@/components/pricing";
 import pricingData from "@/mocks/pricing.json";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Pricing",
+  description:
+    "Choose the perfect plan for your needs. We offer flexible pricing options to suit your healthcare needs.",
+  keywords: "pricing, healthcare, medical records, blockchain",
+};
 
 export default function PricingPage() {
   return (

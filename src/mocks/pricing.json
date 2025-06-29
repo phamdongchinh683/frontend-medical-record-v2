@@ -34,14 +34,9 @@
   "title": "Ready to Get Started?",
   "description": "Join thousands of patients and healthcare providers who trust MedRecords to keep their medical information secure and accessible.",
   "primaryButton": {
-   "text": "Start Free Trial",
-   "icon": "ArrowRight"
+   "text": "Get Started"
   },
-  "secondaryButton": {
-   "text": "Talk to Sales",
-   "icon": "Phone"
-  },
-  "disclaimer": "30-day free trial • No credit card required • Cancel anytime"
+  "href": "/signup"
  },
  "contact": {
   "title": "Need Help Choosing?",
@@ -51,8 +46,8 @@
     "icon": "Phone",
     "title": "Call Us",
     "description": "Speak with our sales team",
-    "action": "+1 (555) 123-4567",
-    "href": "tel:+15551234567"
+    "action": "+84 931 635 344",
+    "href": "tel:+84931635344"
    },
    {
     "icon": "Mail",

@@ -14,9 +14,9 @@ export function WalletRedirect() {
   useEffect(() => {
     if (!isLoading && roleNumber !== undefined) {
       if (roleNumber === Role.DOCTOR) {
-        router.push("/doctor");
+        router.push("/dashboard/doctor");
       } else if (roleNumber === Role.PATIENT) {
-        router.push("/patient");
+        router.push("/dashboard/patient");
       } else if (roleNumber === Role.NONE) {
         router.push("/signup");
       }

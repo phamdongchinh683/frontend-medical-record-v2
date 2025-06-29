@@ -3,11 +3,6 @@ export interface IPricingCta {
   description: string;
   primaryButton: {
     text: string;
-    icon: string;
   };
-  secondaryButton: {
-    text: string;
-    icon: string;
-  };
-  disclaimer: string;
+  href: string;
 }

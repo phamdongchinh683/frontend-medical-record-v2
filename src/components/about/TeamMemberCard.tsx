@@ -1,5 +1,6 @@
 import { ITeamMemberCardProps } from "@/interfaces/TeamMemberCardProps";
 import { Linkedin, Mail, Twitter } from "lucide-react";
+import Link from "next/link";
 
 export default function TeamMemberCard({ member }: ITeamMemberCardProps) {
   return (
@@ -22,27 +23,27 @@ export default function TeamMemberCard({ member }: ITeamMemberCardProps) {
           {member.bio}
         </p>
         <div className="flex space-x-4">
-          <a
+          <Link
             href={member.social.linkedin}
             className="text-slate-400 hover:text-pink-600 transition-colors duration-200 p-2 rounded-lg hover:bg-pink-50"
             aria-label={`${member.name}'s LinkedIn profile`}
           >
             <Linkedin className="h-5 w-5" />
-          </a>
-          <a
+          </Link>
+          <Link
             href={member.social.twitter}
             className="text-slate-400 hover:text-pink-500 transition-colors duration-200 p-2 rounded-lg hover:bg-pink-50"
             aria-label={`${member.name}'s Twitter profile`}
           >
             <Twitter className="h-5 w-5" />
-          </a>
-          <a
+          </Link>
+          <Link
             href={`mailto:${member.social.email}`}
             className="text-slate-400 hover:text-pink-600 transition-colors duration-200 p-2 rounded-lg hover:bg-pink-50"
             aria-label={`Email ${member.name}`}
           >
             <Mail className="h-5 w-5" />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

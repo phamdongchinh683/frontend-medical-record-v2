@@ -1,6 +1,7 @@
 "use client";
 import { IPricingContact } from "@/interfaces/IPricingContact";
 import { renderIcon } from "@/utils/iconMap";
+import Link from "next/link";
 
 export default function PricingContact({ data }: { data: IPricingContact }) {
   return (
@@ -25,12 +26,12 @@ export default function PricingContact({ data }: { data: IPricingContact }) {
                 {method.title}
               </h3>
               <p className="text-gray-600 mb-4">{method.description}</p>
-              <a
-                href={method.href}
+              <Link
+                href={method.href ?? "#"}
                 className="text-pink-600 font-medium hover:text-pink-700"
               >
                 {method.action}
-              </a>
+              </Link>
             </div>
           ))}
         </div>

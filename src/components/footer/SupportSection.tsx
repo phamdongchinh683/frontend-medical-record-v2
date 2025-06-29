@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function SupportSection() {
   return (
     <div className="space-y-4">
@@ -6,36 +8,36 @@ export default function SupportSection() {
       </h4>
       <ul className="space-y-3 text-gray-400">
         <li>
-          <a
+          <Link
             href="#"
             className="hover:text-pink-400 transition-colors duration-200 text-sm lg:text-base block"
           >
             Help Center
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             href="#"
             className="hover:text-pink-400 transition-colors duration-200 text-sm lg:text-base block"
           >
             Privacy
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             href="#"
             className="hover:text-pink-400 transition-colors duration-200 text-sm lg:text-base block"
           >
             Terms
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             href="#"
             className="hover:text-pink-400 transition-colors duration-200 text-sm lg:text-base block"
           >
             HIPAA
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

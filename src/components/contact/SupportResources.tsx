@@ -1,5 +1,6 @@
 import { ISupportResourcesProps } from "@/interfaces/ISupportResourcesProps";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function SupportResources({
   supportResources,
@@ -37,13 +38,13 @@ export default function SupportResources({
                 {resource.title}
               </h3>
               <p className="text-gray-600 mb-6">{resource.description}</p>
-              <a
+              <Link
                 href={resource.link}
                 className="inline-flex items-center text-pink-600 hover:text-pink-700 font-medium"
               >
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
+              </Link>
             </div>
           ))}
         </div>
