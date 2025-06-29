@@ -1,0 +1,73 @@
+{
+ "hero": {
+  "badge": {
+   "icon": "Star",
+   "text": "30-Day Free Trial • No Credit Card Required"
+  },
+  "title": "Simple, Transparent",
+  "subtitle": "Pricing",
+  "description": "Choose the perfect plan for your healthcare needs. All plans include HIPAA-compliant security, 24/7 access, and our commitment to protecting your medical data."
+ },
+ "faqs": [
+  {
+   "question": "Can I change my plan at any time?",
+   "answer": "Absolutely. You can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments."
+  },
+  {
+   "question": "Is my data secure and HIPAA compliant?",
+   "answer": "Yes, we are fully HIPAA compliant and use bank-level encryption to protect your medical data. We undergo regular security audits and maintain SOC 2 Type II certification."
+  },
+  {
+   "question": "What payment methods do you accept?",
+   "answer": "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers for enterprise customers."
+  },
+  {
+   "question": "Can I cancel my subscription anytime?",
+   "answer": "Yes, you can cancel your subscription at any time. There are no cancellation fees, and you'll retain access until the end of your billing period."
+  },
+  {
+   "question": "Do you offer discounts for healthcare organizations?",
+   "answer": "Yes, we offer special pricing for non-profit healthcare organizations, educational institutions, and volume discounts for large deployments."
+  }
+ ],
+ "cta": {
+  "title": "Ready to Get Started?",
+  "description": "Join thousands of patients and healthcare providers who trust MedRecords to keep their medical information secure and accessible.",
+  "primaryButton": {
+   "text": "Start Free Trial",
+   "icon": "ArrowRight"
+  },
+  "secondaryButton": {
+   "text": "Talk to Sales",
+   "icon": "Phone"
+  },
+  "disclaimer": "30-day free trial • No credit card required • Cancel anytime"
+ },
+ "contact": {
+  "title": "Need Help Choosing?",
+  "description": "Our team is here to help you find the perfect plan for your needs.",
+  "methods": [
+   {
+    "icon": "Phone",
+    "title": "Call Us",
+    "description": "Speak with our sales team",
+    "action": "+1 (555) 123-4567",
+    "href": "tel:+15551234567"
+   },
+   {
+    "icon": "Mail",
+    "title": "Email Us",
+    "description": "Get detailed information",
+    "action": "sales@medrecords.com",
+    "href": "mailto:sales@medrecords.com"
+   },
+   {
+    "icon": "Zap",
+    "title": "Chat Bot",
+    "description": "Instant support available",
+    "action": "Start Chat",
+    "href": "Chatbot"
+   }
+  ]
+ }
+}

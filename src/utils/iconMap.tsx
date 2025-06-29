@@ -20,6 +20,7 @@ import {
   Star,
   Users,
   X,
+  Zap,
 } from "lucide-react";
 
 export const iconMap = {
@@ -44,6 +45,7 @@ export const iconMap = {
   MessageCircle,
   BookOpen,
   HelpCircle,
+  Zap,
 };
 
 export type IconName = keyof typeof iconMap;

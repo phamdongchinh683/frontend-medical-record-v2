@@ -9,6 +9,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 [data-rk] {
   --rk-connect-button-background: #ec4899 !important;
   --rk-connect-button-background-error: #ef4444 !important;
