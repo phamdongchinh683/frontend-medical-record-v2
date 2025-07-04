@@ -1,18 +1,36 @@
-[
- {
-  "name": "Home",
-  "href": "/"
- },
- {
-  "name": "Pricing",
-  "href": "/pricing"
- },
- {
-  "name": "About",
-  "href": "/about"
- },
- {
-  "name": "Contact",
-  "href": "/contact"
- }
-]
+{
+ "landingPage": [
+  {
+   "name": "Features",
+   "href": "/"
+  },
+  {
+   "name": "Pricing",
+   "href": "/pricing"
+  },
+  {
+   "name": "About",
+   "href": "/about"
+  },
+  {
+   "name": "Contact",
+   "href": "/contact"
+  },
+  {
+   "name": "Sign Up",
+   "href": "/sign-up"
+  }
+ ],
+ "doctorPage": [
+  {
+   "name": "Home",
+   "href": "/"
+  }
+ ],
+ "patientPage": [
+  {
+   "name": "Home",
+   "href": "/"
+  }
+ ]
+}

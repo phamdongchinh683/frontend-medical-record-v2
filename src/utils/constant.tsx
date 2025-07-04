@@ -7,4 +7,6 @@ enum Role {
   DOCTOR = 2,
 }
 
-export { CONTRACT_ADDRESS, Role };
+const mappedRole = Object.values(Role).filter((v) => typeof v === "number");
+
+export { CONTRACT_ADDRESS, mappedRole, Role };

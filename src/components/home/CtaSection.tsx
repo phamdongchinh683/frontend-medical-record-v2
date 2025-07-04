@@ -14,13 +14,13 @@ export default function CtaSection() {
       </div>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link
-          href={"/dashboard"}
+          href={"/signup"}
           className="bg-white text-pink-600 px-8 py-4 rounded-lg font-semibold hover:bg-pink-50 transition-colors shadow-lg"
         >
-          Sign up now
+          Get Started
         </Link>
         <Link
-          href={"https://moh.gov.vn"}
+          href={"/pricing"}
           className="border border-pink-300 text-white px-8 py-4 rounded-lg font-semibold hover:bg-pink-600 transition-colors"
         >
           Learn more

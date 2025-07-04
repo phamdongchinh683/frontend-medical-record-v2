@@ -8,16 +8,18 @@ export default function ProductSection() {
         Product
       </h4>
       <ul className="space-y-3 text-gray-400">
-        {navigation.map((item) => (
-          <li key={item.name}>
-            <Link
-              href={item.href}
-              className="hover:text-pink-400 transition-colors duration-200 text-sm lg:text-base block"
-            >
-              {item.name}
-            </Link>
-          </li>
-        ))}
+        {navigation.landingPage
+          .filter((item) => item.name !== "Sign Up")
+          .map((item) => (
+            <li key={item.name}>
+              <Link
+                href={item.href}
+                className="hover:text-pink-400 transition-colors duration-200 text-sm lg:text-base block"
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
       </ul>
     </div>
   );

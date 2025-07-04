@@ -19,8 +19,12 @@ import {
   Smartphone,
   Star,
   Users,
+  Wallet,
   X,
   Zap,
+  User,
+  Stethoscope,
+  
 } from "lucide-react";
 
 export const iconMap = {
@@ -46,6 +50,9 @@ export const iconMap = {
   BookOpen,
   HelpCircle,
   Zap,
+  Wallet,
+  User,
+  Stethoscope,
 };
 
 export type IconName = keyof typeof iconMap;

@@ -1,12 +1,11 @@
-// src/hooks/useRoleManagement.tsx
-import { IUserRole } from "@/interfaces/IRole";
+import { IRole } from "@/interfaces/IRole";
 import { CONTRACT_ADDRESS } from "@/utils/constant";
 import { MEDICAL_CONTRACT_ABI } from "@/utils/contractAbi";
 import { useWriteContract } from "wagmi";
 import { useContractRead } from "./useContractRead";
 import useUserAccount from "./useUserAccount";
 
-export function useUserRole(): IUserRole {
+export function useUserRole(): IRole {
   const { address } = useUserAccount();
 
   const {
@@ -28,9 +27,8 @@ export function useUserRole(): IUserRole {
   };
 }
 
-// Register as Patient
 export function useRegisterAsPatient() {
-  const { writeContract } = useWriteContract();
+  const { writeContract, isPending, error, isSuccess } = useWriteContract();
 
   const registerAsPatient = () => {
     writeContract({
@@ -41,7 +39,7 @@ export function useRegisterAsPatient() {
     });
   };
 
-  return { registerAsPatient };
+  return { registerAsPatient, isPending, error, isSuccess };
 }
 
 // Register as Doctor

@@ -1,0 +1,34 @@
+{
+ "roles": [
+  {
+   "id": "patient",
+   "title": "Patient",
+   "description": "Create your personal health record account",
+   "icon": "User",
+   "features": [
+    "Secure medical record storage",
+    "Easy sharing with doctors",
+    "Appointment management",
+    "Health tracking tools",
+    "Family account options",
+    "Mobile app access"
+   ],
+   "color": "pink"
+  },
+  {
+   "id": "doctor",
+   "title": "Doctor",
+   "description": "Join our network of medical professionals",
+   "icon": "Stethoscope",
+   "features": [
+    "Patient record management",
+    "Secure communication tools",
+    "Practice management features",
+    "Collaboration with colleagues",
+    "Advanced reporting tools",
+    "API integrations"
+   ],
+   "color": "rose"
+  }
+ ]
+}

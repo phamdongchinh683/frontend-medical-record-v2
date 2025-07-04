@@ -1,0 +1,22 @@
+[
+ {
+  "icon": "Shield",
+  "title": "Blockchain Security",
+  "description": "Your identity is secured by blockchain technology"
+ },
+ {
+  "icon": "Lock",
+  "title": "No Passwords",
+  "description": "Never worry about forgotten passwords again"
+ },
+ {
+  "icon": "Zap",
+  "title": "Instant Access",
+  "description": "Quick and seamless registration process"
+ },
+ {
+  "icon": "Globe",
+  "title": "Universal Identity",
+  "description": "One wallet, access from anywhere"
+ }
+]

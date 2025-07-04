@@ -1,4 +1,5 @@
-import { Activity, ChevronRight, FileText, Shield } from "lucide-react";
+import { renderIcon } from "@/utils/iconMap";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -8,7 +9,7 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-flex items-center px-4 py-2 bg-pink-100 text-pink-800 rounded-full text-sm font-medium mb-6">
-              <Shield className="h-4 w-4 mr-2" />
+              {renderIcon("Shield", { className: "h-4 w-4 mr-2" })}
               HIPAA Compliant & Secure
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
@@ -24,6 +25,12 @@ export default function HeroSection() {
               anytime, anywhere with enterprise-grade security.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/sign-up">
+                <div className="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-rose-600 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center">
+                  Get Started
+                  {renderIcon("ArrowRight", { className: "h-4 w-4 ml-2" })}
+                </div>
+              </Link>
             </div>
           </div>
           <div className="relative">
@@ -41,7 +48,9 @@ export default function HeroSection() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-4 bg-pink-50 rounded-lg border border-pink-100">
                   <div className="flex items-center">
-                    <Activity className="h-5 w-5 text-pink-600 mr-3" />
+                    {renderIcon("Activity", {
+                      className: "h-5 w-5 text-pink-600 mr-3",
+                    })}
                     <div>
                       <p className="font-medium text-gray-900">Overview</p>
                       <p className="text-sm text-gray-500">
@@ -49,11 +58,15 @@ export default function HeroSection() {
                       </p>
                     </div>
                   </div>
-                  <ChevronRight className="h-5 w-5 text-gray-400" />
+                  {renderIcon("ChevronRight", {
+                    className: "h-5 w-5 text-gray-400",
+                  })}
                 </div>
                 <div className="flex items-center justify-between p-4 bg-pink-50 rounded-lg border border-pink-100">
                   <div className="flex items-center">
-                    <FileText className="h-5 w-5 text-pink-600 mr-3" />
+                    {renderIcon("FileText", {
+                      className: "h-5 w-5 text-pink-600 mr-3",
+                    })}
                     <div>
                       <p className="font-medium text-gray-900">My Records</p>
                       <p className="text-sm text-gray-500">
@@ -61,11 +74,15 @@ export default function HeroSection() {
                       </p>
                     </div>
                   </div>
-                  <ChevronRight className="h-5 w-5 text-gray-400" />
+                  {renderIcon("ChevronRight", {
+                    className: "h-5 w-5 text-gray-400",
+                  })}
                 </div>
                 <div className="flex items-center justify-between p-4 bg-rose-50 rounded-lg border border-rose-100">
                   <div className="flex items-center">
-                    <Shield className="h-5 w-5 text-rose-600 mr-3" />
+                    {renderIcon("Shield", {
+                      className: "h-5 w-5 text-rose-600 mr-3",
+                    })}
                     <div>
                       <p className="font-medium text-gray-900">
                         Doctor Permission
@@ -75,7 +92,9 @@ export default function HeroSection() {
                       </p>
                     </div>
                   </div>
-                  <ChevronRight className="h-5 w-5 text-gray-400" />
+                  {renderIcon("ChevronRight", {
+                    className: "h-5 w-5 text-gray-400",
+                  })}
                 </div>
               </div>
             </div>
