@@ -42,9 +42,8 @@ export function useRegisterAsPatient() {
   return { registerAsPatient, isPending, error, isSuccess };
 }
 
-// Register as Doctor
 export function useRegisterAsDoctor() {
-  const { writeContract } = useWriteContract();
+  const { writeContract, isPending, error, isSuccess } = useWriteContract();
 
   const registerAsDoctor = () => {
     writeContract({
@@ -55,5 +54,5 @@ export function useRegisterAsDoctor() {
     });
   };
 
-  return { registerAsDoctor };
+  return { registerAsDoctor, isPending, error, isSuccess };
 }

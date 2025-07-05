@@ -48,7 +48,7 @@ export default function MetaMaskSignUp({
               </p>
             </div>
           </div>
-          <BackButton setCurrentStep={setCurrentStep} />
+          <BackButton setCurrentStep={setCurrentStep} text="Change" />
         </div>
       </div>
 

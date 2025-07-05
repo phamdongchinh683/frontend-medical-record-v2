@@ -8,7 +8,7 @@ export default function ProductSection() {
         Product
       </h4>
       <ul className="space-y-3 text-gray-400">
-        {navigation.landingPage
+        {navigation.public
           .filter((item) => item.name !== "Sign Up")
           .map((item) => (
             <li key={item.name}>

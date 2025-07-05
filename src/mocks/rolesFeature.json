@@ -6,12 +6,9 @@
    "description": "Create your personal health record account",
    "icon": "User",
    "features": [
-    "Secure medical record storage",
-    "Easy sharing with doctors",
-    "Appointment management",
-    "Health tracking tools",
-    "Family account options",
-    "Mobile app access"
+    "Manage permissions",
+    "View My Records",
+    "Manage My Profile"
    ],
    "color": "pink"
   },
@@ -22,11 +19,9 @@
    "icon": "Stethoscope",
    "features": [
     "Patient record management",
-    "Secure communication tools",
-    "Practice management features",
-    "Collaboration with colleagues",
-    "Advanced reporting tools",
-    "API integrations"
+    "View patient records",
+    "Manage My Profile",
+    "View authorized patients"
    ],
    "color": "rose"
   }

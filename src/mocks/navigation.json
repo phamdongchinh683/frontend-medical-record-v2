@@ -1,5 +1,59 @@
 {
- "landingPage": [
+ "None": [
+  {
+   "name": "Sign Up",
+   "href": "/sign-up"
+  }
+ ],
+ "doctorPage": [
+  {
+   "name": "Overview",
+   "href": "/dashboard/doctor"
+  },
+  {
+   "name": "My Dashboard",
+   "href": "/dashboard/doctor"
+  },
+  {
+   "name": "Patients",
+   "href": "/dashboard/doctor/patients"
+  },
+  {
+   "name": "Medical Records",
+   "href": "/dashboard/patient/records"
+  },
+  {
+   "name": "Search Patient",
+   "href": "/dashboard/doctor/search-patient"
+  },
+  {
+   "name": "Profile",
+   "href": "/dashboard/doctor/profile"
+  }
+ ],
+ "patientPage": [
+  {
+   "name": "Overview",
+   "href": "/dashboard/patient"
+  },
+  {
+   "name": "My Dashboard",
+   "href": "/dashboard/patient"
+  },
+  {
+   "name": "My Records",
+   "href": "/dashboard/patient/records"
+  },
+  {
+   "name": "Profile",
+   "href": "/dashboard/patient/profile"
+  },
+  {
+   "name": "Doctor Permission",
+   "href": "/dashboard/patient/doctor-permission"
+  }
+ ],
+ "public": [
   {
    "name": "Features",
    "href": "/"
@@ -15,22 +69,6 @@
   {
    "name": "Contact",
    "href": "/contact"
-  },
-  {
-   "name": "Sign Up",
-   "href": "/sign-up"
-  }
- ],
- "doctorPage": [
-  {
-   "name": "Home",
-   "href": "/"
-  }
- ],
- "patientPage": [
-  {
-   "name": "Home",
-   "href": "/"
   }
  ]
 }

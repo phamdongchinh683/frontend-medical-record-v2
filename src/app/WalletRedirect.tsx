@@ -1,17 +1,14 @@
 "use client";
 
-import useUserAccount from "@/hooks/useUserAccount";
 import { useUserRole } from "@/hooks/useUserRole";
-import { Role } from "@/utils/constant";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useAccountEffect } from "wagmi";
+import { Role } from "@/utils/constant";
 
 export function WalletRedirect() {
-  const { address } = useUserAccount();
-  const { role: roleNumber } = useUserRole();
   const router = useRouter();
-  const pathname = usePathname();
+  const { role: roleNumber } = useUserRole();
 
   useAccountEffect({
     onDisconnect: () => {
@@ -20,17 +17,12 @@ export function WalletRedirect() {
   });
 
   useEffect(() => {
-    if (roleNumber === Role.DOCTOR && pathname !== "/dashboard/doctor") {
+    if (roleNumber === Role.DOCTOR) {
       router.push("/dashboard/doctor");
-    } else if (
-      roleNumber === Role.PATIENT &&
-      pathname !== "/dashboard/patient"
-    ) {
+    } else if (roleNumber === Role.PATIENT) {
       router.push("/dashboard/patient");
-    } else if (roleNumber === Role.NONE && pathname !== "/sign-up") {
+    } else {
       router.push("/sign-up");
     }
-  }, [roleNumber, router, address, pathname]);
-
-  return null;
+  }, [roleNumber, router]);
 }

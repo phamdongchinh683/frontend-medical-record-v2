@@ -24,6 +24,7 @@ import {
   Zap,
   User,
   Stethoscope,
+  ArrowLeft
   
 } from "lucide-react";
 
@@ -53,6 +54,7 @@ export const iconMap = {
   Wallet,
   User,
   Stethoscope,
+  ArrowLeft,
 };
 
 export type IconName = keyof typeof iconMap;
