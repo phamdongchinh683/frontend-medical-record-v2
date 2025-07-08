@@ -2,7 +2,6 @@
 
 import Button from "@/components/Button";
 import {
-  BackButton,
   Benefits,
   MetaMaskSignUp,
   RoleSelection,
@@ -20,6 +19,7 @@ import { renderIcon } from "@/utils/iconMap";
 import { getBalance } from "@wagmi/core";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import PersonalInfo from "./PersonalInfo";
 
 export default function SignUpClient() {
   const router = useRouter();
@@ -143,9 +143,7 @@ export default function SignUpClient() {
   const getRegistrationButtonText = () => {
     const isPending =
       selectedRole === "patient" ? isPendingPatient : isPendingDoctor;
-    const roleText = selectedRole === "patient" ? "Patient" : "Doctor";
-
-    return isPending ? "Registering..." : `Register as ${roleText}`;
+    return isPending ? "Registering..." : `Register`;
   };
 
   const isRegistrationSuccess =
@@ -184,39 +182,43 @@ export default function SignUpClient() {
           )}
 
           {currentStep === 3 && (
-            <>
-              <div className="text-center mb-8">
-                <div className="mx-auto w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mb-4">
-                  {renderIcon("CheckCircle", {
-                    className: "h-8 w-8 text-green-600",
-                  })}
-                </div>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                  Wallet Connected
-                </h2>
-                <p className="text-gray-600">
-                  {selectedRole === "patient"
-                    ? "Please click the button below to register as patient"
-                    : "Please click the button below to register as doctor"}
-                </p>
-                <div className="flex justify-end pt-1 gap-2">
-                  <BackButton
-                    setCurrentStep={() => setCurrentStep(2)}
-                    text="Back"
-                  />
-                </div>
+            <div className="text-center">
+              <div
+                className="flex justify-end"
+                onClick={() => setCurrentStep(2)}
+              >
+                {renderIcon("ArrowLeft", {
+                  className: "h-8 w-8 text-gray-600",
+                })}
               </div>
+              <div className="mx-auto w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mb-4">
+                {renderIcon("CheckCircle", {
+                  className: "h-8 w-8 text-green-600",
+                })}
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                Complete Your Profile
+              </h2>
+              <p className="text-gray-600">
+                {selectedRole === "patient"
+                  ? "Tell us about yourself to personalize your healthcare experience"
+                  : "Provide your professional information to verify your credentials"}
+              </p>
+              <br />
               <WalletConnected account={account} />
               <br />
-              <Button
-                type="submit"
-                value={getRegistrationButtonText()}
-                onClick={handleRegistration}
-              />
-            </>
+              <form onSubmit={handleRegistration} className="space-y-6">
+                <PersonalInfo />
+              </form>
+              <div className="pt-3">
+                <Button
+                  type="submit"
+                  value={getRegistrationButtonText()}
+                  onClick={handleRegistration}
+                />
+              </div>
+            </div>
           )}
-
           {isRegistrationSuccess && currentStep === 4 && <SuccessAction />}
           <SecurityNotice />
         </div>

@@ -8,12 +8,12 @@ export default function NavigationSection() {
   const { role: roleNumber } = useUserRole();
 
   return (
-    <div className="hidden md:flex items-center space-x-2">
+    <nav className="hidden md:flex items-center space-x-2">
       {roleNumber == undefined || roleNumber === Role.NONE
         ? navigationRole(navigation.None)
         : roleNumber === Role.DOCTOR
         ? navigationRole(accessDashboard(roleNumber))
         : navigationRole(accessDashboard(roleNumber))}
-    </div>
+    </nav>
   );
 }

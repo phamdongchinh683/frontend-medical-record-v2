@@ -3,10 +3,12 @@ export default function Button({
   value,
   name,
   onClick,
+  className,
 }: {
   type: string;
   value?: string;
   name?: string;
+  className?: string;
   onClick?: () => void | undefined;
 }) {
   return (
@@ -15,7 +17,10 @@ export default function Button({
       value={value}
       name={name}
       onClick={onClick}
-      className="w-full bg-gradient-to-r from-pink-500 to-rose-500 text-white py-3 rounded-lg hover:from-pink-600 hover:to-rose-600 transition-all duration-300 font-semibold"
+      className={`${
+        className ??
+        "w-full bg-gradient-to-r from-pink-500 to-rose-500 text-white py-3 rounded-lg hover:from-pink-600 hover:to-rose-600 transition-all duration-300 font-semibold"
+      }`}
     ></input>
   );
 }

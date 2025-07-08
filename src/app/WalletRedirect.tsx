@@ -1,10 +1,10 @@
 "use client";
 
 import { useUserRole } from "@/hooks/useUserRole";
+import { Role } from "@/utils/constant";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useAccountEffect } from "wagmi";
-import { Role } from "@/utils/constant";
 
 export function WalletRedirect() {
   const router = useRouter();
@@ -21,6 +21,8 @@ export function WalletRedirect() {
       router.push("/dashboard/doctor");
     } else if (roleNumber === Role.PATIENT) {
       router.push("/dashboard/patient");
+    } else if (roleNumber === undefined) {
+      router.push("/");
     } else {
       router.push("/sign-up");
     }

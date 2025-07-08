@@ -8,49 +8,51 @@
  "doctorPage": [
   {
    "name": "Overview",
+   "icon": "Activity",
    "href": "/dashboard/doctor"
   },
-  {
-   "name": "My Dashboard",
-   "href": "/dashboard/doctor"
-  },
+
   {
    "name": "Patients",
+   "icon": "Users",
    "href": "/dashboard/doctor/patients"
   },
   {
    "name": "Medical Records",
+   "icon": "FileText",
    "href": "/dashboard/patient/records"
   },
   {
    "name": "Search Patient",
+   "icon": "Search",
    "href": "/dashboard/doctor/search-patient"
   },
   {
    "name": "Profile",
-   "href": "/dashboard/doctor/profile"
+   "icon": "User",
+   "href": "/dashboard/profile"
   }
  ],
  "patientPage": [
   {
    "name": "Overview",
-   "href": "/dashboard/patient"
-  },
-  {
-   "name": "My Dashboard",
+   "icon": "Activity",
    "href": "/dashboard/patient"
   },
   {
    "name": "My Records",
+   "icon": "FileText",
    "href": "/dashboard/patient/records"
   },
   {
-   "name": "Profile",
-   "href": "/dashboard/patient/profile"
+   "name": "Doctor Permission",
+   "icon": "Shield",
+   "href": "/dashboard/patient/doctor-permission"
   },
   {
-   "name": "Doctor Permission",
-   "href": "/dashboard/patient/doctor-permission"
+   "name": "Profile",
+   "icon": "User",
+   "href": "/dashboard/profile"
   }
  ],
  "public": [
