@@ -1,7 +1,8 @@
 export interface IDoctorPermission {
- id: string;
- doctorName: string;
- specialization: string;
- hospital: string;
- status: 'Granted' | 'Revoked';
+  id: string;
+  doctorName: string;
+  accessLevel: "Granted" | "Revoked";
+  specialization: string;
+  hospital: string;
+  status: "Active" | "Inactive";
 }

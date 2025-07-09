@@ -43,14 +43,16 @@ export default function PatientDashboard() {
       doctorName: "John Doe",
       specialization: "Cardiology",
       hospital: "John Doe",
-      status: "Granted",
+      accessLevel: "Granted",
+      status: "Active",
     },
     {
       id: "2",
       doctorName: "Jane Doe",
       specialization: "Cardiology",
       hospital: "John Doe",
-      status: "Revoked",
+      accessLevel: "Revoked",
+      status: "Inactive",
     },
   ];
 

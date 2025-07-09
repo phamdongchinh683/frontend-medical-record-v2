@@ -27,7 +27,8 @@ import {
   Stethoscope,
   ArrowLeft,
   UserCheck,
-  AlertCircle
+  AlertCircle,
+  Plus
 } from "lucide-react";
 
 export const iconMap = {
@@ -59,7 +60,8 @@ export const iconMap = {
   ArrowLeft,
   UserCheck,
   AlertCircle,
-  Search
+  Search,
+  Plus
 };
 
 export type IconName = keyof typeof iconMap;
