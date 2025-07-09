@@ -21,6 +21,7 @@ import {
   Users,
   Wallet,
   X,
+  Eye,
   Zap,
   Search,
   User,
@@ -61,7 +62,8 @@ export const iconMap = {
   UserCheck,
   AlertCircle,
   Search,
-  Plus
+  Plus,
+  Eye,
 };
 
 export type IconName = keyof typeof iconMap;

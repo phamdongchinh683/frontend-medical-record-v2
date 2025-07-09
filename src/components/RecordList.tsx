@@ -1,9 +1,11 @@
 import Record from "./Record";
 
-export default function RecordList() {
+export default function RecordList({ tokenIds }: { tokenIds: bigint[] }) {
   return (
-    <div>
-      <Record />
-    </div>
+    <>
+      {tokenIds.map((record, index) => (
+        <Record key={index} tokenId={record.toString()} timestamp={new Date().toISOString()} />
+      ))}
+    </>
   );
 }

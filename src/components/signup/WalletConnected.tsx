@@ -19,6 +19,11 @@ export default function WalletConnected({
           <p className="text-sm text-gray-600">
             {account?.address.slice(0, 6)}...{account?.address.slice(-4)}
           </p>
+          {account?.balance && (
+            <p className="text-sm text-green-600 font-medium">
+              Balance: {account.balance} ETH
+            </p>
+          )}
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { IUserInfo } from "@/interfaces/IUserInfo";
 import { calculateAge } from "@/utils/calculateAge";
 import { renderIcon } from "@/utils/iconMap";
+import { useUserBalance } from "@/hooks/useUserAccount";
 import Button from "../Button";
 import InfoInput from "../InfoInput";
 import Label from "../Label.";
@@ -15,6 +16,7 @@ export default function UserProfile({
   user: IUserInfo;
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }) {
+  const { balance } = useUserBalance();
   const style =
     "w-full px-3 py-2 border border-gray-300 rounded-lg outline-none focus:ring-1 focus:ring-pink-300 focus:border-pink-300 transition-colors duration-200 ";
 
@@ -42,6 +44,11 @@ export default function UserProfile({
             <p className="text-sm text-gray-600">
               Age: {calculateAge(user.dateOfBirth)}
             </p>
+            {balance && (
+              <p className="text-sm text-green-600 font-medium">
+                Wallet Balance: {balance} ETH
+              </p>
+            )}
           </div>
         </div>
 

@@ -11,11 +11,18 @@ if (!walletConnectProjectId) {
   );
 }
 
-const config = getDefaultConfig({
-  appName: "Medical Records DApp",
-  projectId: walletConnectProjectId,
-  chains: [sepolia],
-  ssr: false,
-});
+let configInstance: ReturnType<typeof getDefaultConfig> | null = null;
 
-export default config;
+const getConfig = () => {
+  if (!configInstance) {
+    configInstance = getDefaultConfig({
+      appName: "Medical Records DApp",
+      projectId: walletConnectProjectId,
+      chains: [sepolia],
+      ssr: false,
+    });
+  }
+  return configInstance;
+};
+
+export default getConfig();

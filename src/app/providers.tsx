@@ -14,21 +14,33 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
   const queryClient = useMemo(() => new QueryClient(), []);
 
-  useEffect(() => setMounted(true), []);
+  const theme = useMemo(
+    () =>
+      lightTheme({
+        accentColor: "#ec4899",
+        accentColorForeground: "white",
+        borderRadius: "medium",
+        fontStack: "system",
+      }),
+    []
+  );
 
-  const theme = lightTheme({
-    accentColor: "#ec4899",
-    accentColorForeground: "white",
-    borderRadius: "medium",
-    fontStack: "system",
-  });
+  const wagmiConfig = useMemo(() => config, []);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
-    <WagmiProvider config={config}>
+    <WagmiProvider config={wagmiConfig}>
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider theme={theme}>
           <WalletRedirect />
-          {mounted ? children : null}
+          {children}
         </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>

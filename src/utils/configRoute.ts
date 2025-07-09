@@ -12,7 +12,7 @@ export const accessDashboard = (role: number) =>
     ? [
         {
           name: "My Dashboard",
-          href: "/dashboard/doctor",
+          href: "/dashboard/patient",
         },
       ]
     : [

@@ -2,7 +2,7 @@ export default function Status({
   object,
   status,
 }: {
-  object: any ;
+  object: any;
   status: string;
 }) {
   return (

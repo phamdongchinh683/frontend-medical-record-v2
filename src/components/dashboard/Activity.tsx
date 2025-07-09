@@ -30,7 +30,7 @@ export default function Activity({
                 </p>
               </div>
             </div>
-            <Status object={record} status="Completed" />
+            <Status object={record.status} status="Completed" />
           </div>
         ))}
       </div>

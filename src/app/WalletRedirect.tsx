@@ -8,7 +8,7 @@ import { useAccountEffect } from "wagmi";
 
 export function WalletRedirect() {
   const router = useRouter();
-  const { role: roleNumber } = useUserRole();
+  const { role: roleNumber, isLoading } = useUserRole();
 
   useAccountEffect({
     onDisconnect: () => {
@@ -21,10 +21,10 @@ export function WalletRedirect() {
       router.push("/dashboard/doctor");
     } else if (roleNumber === Role.PATIENT) {
       router.push("/dashboard/patient");
-    } else if (roleNumber === undefined) {
-      router.push("/");
-    } else {
+    } else if (roleNumber === Role.NONE) {
       router.push("/sign-up");
     }
-  }, [roleNumber, router]);
+  }, [roleNumber, isLoading, router]);
+
+  return null;
 }

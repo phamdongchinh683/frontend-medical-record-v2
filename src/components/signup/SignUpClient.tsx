@@ -10,19 +10,20 @@ import {
   SuccessAction,
   WalletConnected,
 } from "@/components/signup";
+import { useUserBalance } from "@/hooks/useUserAccount";
 import { useRegisterAsDoctor, useRegisterAsPatient } from "@/hooks/useUserRole";
 import { IAccountBalance } from "@/interfaces/IAccountBalance";
 import benefits from "@/mocks/benefits.json";
 import roleFeature from "@/mocks/rolesFeature.json";
-import config from "@/rainbowKitConfig";
 import { renderIcon } from "@/utils/iconMap";
-import { getBalance } from "@wagmi/core";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import PersonalInfo from "./PersonalInfo";
 
 export default function SignUpClient() {
   const router = useRouter();
+  const { address, balance } = useUserBalance();
+
   const [selectedRole, setSelectedRole] = useState<string>("");
   const [currentStep, setCurrentStep] = useState<number>(1);
   const [error, setError] = useState<string | null>(null);
@@ -50,30 +51,16 @@ export default function SignUpClient() {
 
   useEffect(() => {
     setIsMetaMaskInstalled(typeof window.ethereum !== "undefined");
-
-    async function fetchAccount() {
-      if (window.ethereum) {
-        try {
-          const accounts: string[] = await window.ethereum.request({
-            method: "eth_accounts",
-          });
-          if (accounts.length > 0) {
-            const balanceResult = await getBalance(config, {
-              address: accounts[0] as `0x${string}`,
-            });
-            setAccount({
-              address: accounts[0],
-              balance: balanceResult.value.toString(),
-            });
-          }
-        } catch (err) {
-          console.error("Error fetching account:", err);
-        }
-      }
-    }
-
-    fetchAccount();
   }, []);
+
+  useEffect(() => {
+    if (address && balance) {
+      setAccount({
+        address: address,
+        balance: balance,
+      });
+    }
+  }, [address, balance]);
 
   useEffect(() => {
     if (isSuccessPatient || isSuccessDoctor) {
@@ -82,7 +69,7 @@ export default function SignUpClient() {
         router.push(`/dashboard/${selectedRole}`);
       }, 2000);
     }
-  }, [isSuccessPatient, isSuccessDoctor, router]);
+  }, [isSuccessPatient, isSuccessDoctor, router, selectedRole]);
 
   useEffect(() => {
     const currentError =
